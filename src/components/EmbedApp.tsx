@@ -6,10 +6,7 @@ import SafeLoader from './SafeLoader'
 const EmbedApp = () => {
   const { safe } = useSafeAppsSDK()
   const [height, setHeight] = useState(0)
-  const { token, message } = useUserProvider()
-
-  console.log('token', token)
-  console.log('message', message)
+  const { token } = useUserProvider()
 
   useEffect(() => {
     function handleMessage(event: MessageEvent) {
